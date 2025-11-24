@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>온기(ON:氣) · 미혼부 인식 개선 서명운동</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: #f5f5f5;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 24px 20px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.8rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #fef3c7;
+      color: #92400e;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-size: 1.7rem;
+      margin: 8px 0 10px;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 16px;
+    }
+
+    .highlight {
+      background: #fff7ed;
+      border-radius: 12px;
+      padding: 10px 12px;
+      font-size: 0.88rem;
+      color: #78350f;
+      border: 1px solid #fed7aa;
+      margin-bottom: 18px;
+    }
+
+    .count-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+    }
+
+    .count-main {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .count-number {
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 8px;
+      border-radius: 999px;
+      background: #e5e7eb;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: #f97316;
+      transition: width 0.3s ease;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      margin: 24px 0 8px;
+      font-weight: 600;
+    }
+
+    .petition-text {
+      font-size: 0.95rem;
+      color: #333;
+      background: #f9fafb;
+      border-radius: 12px;
+      padding: 14px 16px;
+      border: 1px solid #e5e7eb;
+      white-space: pre-line;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 16px 0 8px;
+    }
+
+    .btn-primary {
+      border: none;
+      border-radius: 999px;
+      padding: 11px 18px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      background: #f97316;
+      color: #fff;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1 1 180px;
+    }
+
+    .btn-outline {
+      border-radius: 999px;
+      padding: 9px 16px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      background: transparent;
+      border: 1px solid #e5e7eb;
+      color: #4b5563;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      flex: 1 1 180px;
+    }
+
+    .helper-text {
+      font-size: 0.8rem;
+      color: #6b7280;
+      margin-bottom: 10px;
+    }
+
+    .mobile-note {
+      font-size: 0.8rem;
+      color: #6b7280;
+      margin-top: 6px;
+    }
+
+    .iframe-container {
+      margin-top: 10px;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
+    }
+
+    iframe {
+      border: 0;
+      width: 100%;
+      min-height: 900px;
+    }
+
+    .footer {
+      margin-top: 24px;
+      font-size: 0.8rem;
+      color: #9ca3af;
+      text-align: center;
+    }
+
+    /* 모바일(가로 600px 이하) 전용 스타일 */
+    @media (max-width: 600px) {
+      .card {
+        padding: 18px 14px;
+        border-radius: 14px;
+      }
+
+      h1 {
+        font-size: 1.4rem;
+      }
+
+      .subtitle {
+        font-size: 0.9rem;
+      }
+
+      .highlight {
+        font-size: 0.83rem;
+      }
+
+      .count-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+      }
+
+      .btn-row {
+        flex-direction: column;
+      }
+
+      .btn-primary,
+      .btn-outline {
+        width: 100%;
+      }
+
+      /* 모바일에서는 페이지 안에 삽입된 폼은 숨기기 */
+      .iframe-container {
+        display: none;
+      }
+
+      iframe {
+        min-height: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="card">
+
+      <div class="badge">
+        경희대학교 세계와시민 G41분반 · 팀 온기(ON:氣)
+      </div>
+
+      <h1>미혼부 인식 개선 및 제도 개선을 위한 온라인 서명</h1>
+
+      <p class="subtitle">
+        팀 온기(ON:氣)는 우리 사회에서 법·복지의 사각지대에 놓인 미혼부와 그 자녀들의 현실을 알리고,
+        관련 법안을 발의한 국민의힘 김재섭 의원께 시민들의 지지와 요구를 모아
+        직접 방문 전달하고자 합니다.
+      </p>
+
+      <div class="highlight">
+        본 온라인 서명은 미혼부 단독 출생신고 및 관련 제도 개선을 촉구하는 시민 의견을 모으기 위한 것입니다.
+        수집된 서명 결과는 전체 서명자 수와 함께 요약 통계로 정리하여,
+        국민의힘 김재섭 국회의원실 및 국회 소관 상임위원회에 사전 연락 후 직접 방문하여 공식적으로 전달될 예정입니다.
+      </div>
+
+      <div class="count-box">
+        <div>
+          <div class="count-main">현재 서명 참여 현황</div>
+          <div>
+            <span class="count-number" id="signatureCount">0</span> 명 참여 (Google Form 기준)
+          </div>
+        </div>
+        <div style="flex:1; margin-left: 16px;">
+          <div style="display:flex; justify-content:space-between; font-size:0.75rem; color:#6b7280;">
+            <span>목표 100명</span>
+            <span id="progressLabel">0%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-title">서명 취지문</h2>
+      <div class="petition-text">
+우리 사회에는 혼자 아이를 키우는 미혼부가 수천 명 존재하지만,
+이들은 여전히 법과 복지의 사각지대에 놓여 있습니다.
+
+특히 현행 제도 아래에서 남성의 단독 출생신고는 매우 어렵고,
+그 결과 아이가 출생신고조차 되지 못한 채
+‘존재하지 않는 사람’처럼 살아가야 하는 사례가 발생하고 있습니다.
+
+우리는 다음과 같은 제도 개선을 촉구합니다.
+
+1. 미혼부의 단독 출생신고 절차를 현실에 맞게 정비할 것  
+2. 미혼부 가정에 대한 맞춤형 상담·복지 지원을 확대할 것  
+3. 미혼부에 대한 사회적 편견을 해소하기 위한 공적 캠페인을 추진할 것  
+
+아래 온라인 서명을 통해 미혼부와 아이들이
+권리 있는 시민으로서 당당히 살아갈 수 있도록 함께해주세요.
+      </div>
+
+      <h2 class="section-title">온라인 서명 참여하기</h2>
+
+      <div class="helper-text">
+        아래 버튼을 통해 경희대학교 세계와시민 G41분반 GCP 프로젝트 팀 온기(ON:氣)가 만든 공식 Google Form으로 이동합니다.
+        서명 내용은 Google 스프레드시트에 저장되며,
+        미혼부 관련 법·제도 개선을 위한 의견 전달 및 연구 목적으로만 활용됩니다.
+      </div>
+
+      <div class="btn-row">
+        <a
+          class="btn-primary"
+          href="https://docs.google.com/forms/d/1Ue1p-VXwYNAhAEG6nwMr4wVQiRRFOCXHJ_HV10Viw0M/viewform"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          새 창에서 서명하기
+        </a>
+
+        <a
+          class="btn-outline"
+          href="https://docs.google.com/forms/d/1Ue1p-VXwYNAhAEG6nwMr4wVQiRRFOCXHJ_HV10Viw0M/viewform?usp=sf_link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Google Form 원본 열기
+        </a>
+      </div>
+
+      <p class="mobile-note">
+        모바일 환경에서는 위의 버튼을 통해 서명 페이지로 이동하시는 것을 권장합니다.
+        PC에서는 아래에 서명 양식이 직접 표시됩니다.
+      </p>
+
+      <!-- PC에서만 보이는 구글폼 임베드 -->
+      <div class="iframe-container">
+        <iframe
+          src="https://docs.google.com/forms/d/1Ue1p-VXwYNAhAEG6nwMr4wVQiRRFOCXHJ_HV10Viw0M/viewform?embedded=true"
+        >
+          로드 중입니다…
+        </iframe>
+      </div>
+
+      <div class="footer">
+        이 페이지는 경희대학교 세계와시민 G41분반 GCP 프로젝트<br />
+        <strong>팀 온기(ON:氣)</strong>의 시민 서명 페이지입니다.<br />
+        서명 데이터는 Google Form / 스프레드시트에 저장되며,<br />
+        미혼부 관련 법·제도 개선을 위한 의견 전달 및 연구 목적으로만 활용됩니다.
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // 목표 인원 및 현재 인원 (필요할 때 수동으로 숫자만 바꾸면 됨)
+    const GOAL = 100;
+    const APPROX_CURRENT = 0; // 예: 서명 37명 모이면 37로 변경
+
+    const signatureCountEl = document.getElementById("signatureCount");
+    const progressFill = document.getElementById("progressFill");
+    const progressLabel = document.getElementById("progressLabel");
+
+    function updateStats(count) {
+      signatureCountEl.textContent = count.toString();
+      const percent = Math.min(100, Math.round((count / GOAL) * 100));
+      progressFill.style.width = percent + "%";
+      progressLabel.textContent = percent + "%";
+    }
+
+    updateStats(APPROX_CURRENT);
+  </script>
+
+</body>
+</html>
